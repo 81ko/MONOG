@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "monologue",
+    "slug": "monologue",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.monologue",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "写真を撮影して、ひとりごとの記録に追加するためにカメラを使用します。",
+        "NSMicrophoneUsageDescription": "音声のひとりごとを録音するためにマイクを使用します。",
+        "NSPhotoLibraryUsageDescription": "写真を選んで、ひとりごとの記録に追加するために写真ライブラリを使用します。"
+      },
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-3940256099942544~1458002511"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.anonymous.monologue",
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-3940256099942544~3347511713"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sqlite",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "写真を選んで、ひとりごとの記録に追加するために写真ライブラリを使用します。",
+          "cameraPermission": "写真を撮影して、ひとりごとの記録に追加するためにカメラを使用します。",
+          "microphonePermission": "音声付きの撮影にマイクを使用します。"
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "音声のひとりごとを録音するためにマイクを使用します。"
+        }
+      ],
+      "react-native-iap"
+    ]
+  }
+}
